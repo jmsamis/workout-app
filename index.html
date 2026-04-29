@@ -279,29 +279,9 @@ const DAYS = {
   full: { label: "Frequency Day", sub: "Full Body · Hypertrophy 2x", exercises: ["dbInclinePress","saRow","goblet","slRDL","crossover","pallof"] },
 };
 
-// Conditioning data: indexed by global week (1..20)
-const CONDITIONING = [
-  /* W1  */ { friPM: {label:"Endurance",       text:"30 min steady-state @ conversational pace"}, sat: {label:"Speed/Threshold", text:"8 x 20s max effort / 40s easy"},          sun: {label:"Endurance",       text:"25 min steady-state @ conversational pace"} },
-  /* W2  */ { friPM: {label:"Endurance",       text:"35 min steady-state @ conversational pace"}, sat: {label:"MAP",             text:"3 x 5 min @ 85–90% effort / 3 min rest"}, sun: {label:"Anaerobic",       text:"6 x 30s all-out / 3 min rest"} },
-  /* W3  */ { friPM: {label:"Speed/Threshold", text:"10 x 20s max effort / 40s easy"},            sat: {label:"Interval",        text:"5 x 2 min hard / 2 min easy"},            sun: {label:"Anaerobic",       text:"7 x 30s all-out / 3 min rest"} },
-  /* W4  */ { friPM: {label:"Endurance",       text:"40 min steady-state @ conversational pace"}, sat: {label:"MAP",             text:"3 x 6 min @ 85–90% effort / 3 min rest"}, sun: {label:"Speed/Threshold", text:"12 x 20s max effort / 40s easy"} },
-  /* W5  */ { friPM: {label:"Endurance",       text:"30 min steady-state @ conversational pace"}, sat: {label:"Anaerobic",       text:"8 x 30s all-out / 3 min rest"},           sun: {label:"MAP",             text:"4 x 5 min @ 85–90% effort / 3 min rest"} },
-  /* W6  */ { friPM: {label:"Endurance",       text:"25 min steady-state @ conversational pace"}, sat: {label:"Speed/Threshold", text:"6 x 20s max effort / 40s easy"},          sun: {label:"Interval",        text:"4 x 2 min hard / 2 min easy"} },
-  /* W7  */ { friPM: {label:"Endurance",       text:"35 min steady-state @ conversational pace"}, sat: {label:"MAP",             text:"2 x 5 min @ 85–90% effort / 3 min rest"}, sun: {label:"Anaerobic",       text:"5 x 30s all-out / 3 min rest"} },
-  /* W8  */ { friPM: {label:"Speed/Threshold", text:"10 x 25s max effort / 35s easy"},            sat: {label:"Endurance",       text:"30 min steady-state @ conversational pace"}, sun: {label:"Anaerobic",     text:"6 x 35s all-out / 3 min rest"} },
-  /* W9  */ { friPM: {label:"Endurance",       text:"40 min steady-state @ conversational pace"}, sat: {label:"MAP",             text:"3 x 7 min @ 85–90% effort / 3 min rest"}, sun: {label:"Speed/Threshold", text:"12 x 25s max effort / 35s easy"} },
-  /* W10 */ { friPM: {label:"Interval",        text:"6 x 2 min hard / 2 min easy"},               sat: {label:"Anaerobic",       text:"7 x 35s all-out / 3 min rest"},           sun: {label:"MAP",             text:"4 x 6 min @ 85–90% effort / 3 min rest"} },
-  /* W11 */ { friPM: {label:"Endurance",       text:"45 min steady-state @ conversational pace"}, sat: {label:"Speed/Threshold", text:"14 x 25s max effort / 35s easy"},         sun: {label:"Endurance",       text:"35 min steady-state @ conversational pace"} },
-  /* W12 */ { friPM: {label:"Endurance",       text:"30 min steady-state @ conversational pace"}, sat: {label:"MAP",             text:"4 x 7 min @ 85–90% effort / 3 min rest"}, sun: {label:"Anaerobic",       text:"8 x 35s all-out / 3 min rest"} },
-  /* W13 */ { friPM: {label:"Speed/Threshold", text:"8 x 25s max effort / 35s easy"},             sat: {label:"Interval",        text:"4 x 2.5 min hard / 2.5 min easy"},        sun: {label:"Anaerobic",       text:"5 x 35s all-out / 3 min rest"} },
-  /* W14 */ { friPM: {label:"Endurance",       text:"40 min steady-state @ conversational pace"}, sat: {label:"MAP",             text:"2 x 6 min @ 85–90% effort / 3 min rest"}, sun: {label:"Speed/Threshold", text:"10 x 30s max effort / 30s easy"} },
-  /* W15 */ { friPM: {label:"Endurance",       text:"35 min steady-state @ conversational pace"}, sat: {label:"Anaerobic",       text:"6 x 40s all-out / 3 min rest"},           sun: {label:"MAP",             text:"3 x 8 min @ 85–90% effort / 3 min rest"} },
-  /* W16 */ { friPM: {label:"Endurance",       text:"45 min steady-state @ conversational pace"}, sat: {label:"Speed/Threshold", text:"12 x 30s max effort / 30s easy"},         sun: {label:"Interval",        text:"6 x 2.5 min hard / 2.5 min easy"} },
-  /* W17 */ { friPM: {label:"Endurance",       text:"50 min steady-state @ conversational pace"}, sat: {label:"MAP",             text:"4 x 8 min @ 85–90% effort / 3 min rest"}, sun: {label:"Anaerobic",       text:"7 x 40s all-out / 3 min rest"} },
-  /* W18 */ { friPM: {label:"Speed/Threshold", text:"14 x 30s max effort / 30s easy"},            sat: {label:"Endurance",       text:"40 min steady-state @ conversational pace"}, sun: {label:"Anaerobic",     text:"8 x 40s all-out / 3 min rest"} },
-  /* W19 */ { friPM: {label:"Endurance",       text:"30 min steady-state @ conversational pace"}, sat: {label:"MAP",             text:"5 x 7 min @ 85–90% effort / 3 min rest"}, sun: {label:"Speed/Threshold", text:"8 x 30s max effort / 30s easy"} },
-  /* W20 */ { friPM: {label:"Interval",        text:"4 x 3 min hard / 3 min easy"},               sat: {label:"Anaerobic",       text:"5 x 40s all-out / 3 min rest"},           sun: {label:"MAP",             text:"2 x 8 min @ 85–90% effort / 3 min rest"} },
-];
+// Conditioning has been deferred to a post-program "Year of the Engine" block.
+// Saturday is now Pilates / Activity with Simone (see renderPilatesCard).
+// Sunday is full rest. Friday is lift-only (no PM bike).
 
 // ============================================================
 // STATE
@@ -464,7 +444,7 @@ function renderTabs() {
   }
 }
 function dayLabelShort(key) {
-  return { mon: "PUSH", tue: "PULL", wed: "REST", thu: "LEGS", fri: "FULL", sat: "BIKE", sun: "BIKE" }[key];
+  return { mon: "PUSH", tue: "PULL", wed: "REST", thu: "LEGS", fri: "FULL", sat: "PILATES", sun: "REST" }[key];
 }
 function formatDate(s) {
   const d = ymdToDate(s);
@@ -493,38 +473,51 @@ function renderMain() {
 
   // Wed = pure rest
   if (dayKey === "wed") {
-    main.innerHTML = `<div class="rest-day"><div class="icon">😌</div><h2 class="day-title">REST</h2><div class="msg">Active recovery, mobility, or Pilates.<br>Eat. Sleep. Hydrate.</div></div>`;
+    main.innerHTML = `<div class="rest-day"><div class="icon">😌</div><h2 class="day-title">REST</h2><div class="msg">Active recovery, mobility, or a walk.<br>Eat. Sleep. Hydrate.</div></div>`;
     return;
   }
 
-  // Sat / Sun = conditioning only
-  if (dayKey === "sat" || dayKey === "sun") {
-    const cond = CONDITIONING[w - 1];
-    const block = cond ? cond[dayKey] : null;
-    const title = (dayKey === "sat" ? "Sat" : "Sun") + " Conditioning";
-    renderHeaderRow(main, title, null, weekInMeso, block ? block.label : "");
-    renderConditioning(main, w, dayKey);
+  // Sun = pure rest
+  if (dayKey === "sun") {
+    main.innerHTML = `<div class="rest-day"><div class="icon">🛌</div><h2 class="day-title">REST</h2><div class="msg">Full rest day.<br>Hydrate, get light, sleep early.</div></div>`;
     return;
   }
 
-  // Friday: Full Body lift + PM endurance ride
-  if (dayKey === "fri") {
-    renderHeaderRow(main, DAYS.full.label, rpe, weekInMeso);
-    renderLiftDay(main, w, mesoIdx, weekInMeso, "full", isDeload(weekInMeso));
-    const friPMHeader = document.createElement("div");
-    friPMHeader.style.marginTop = "20px";
-    friPMHeader.innerHTML = `<div class="day-sub" style="color:var(--accent);font-weight:800;">FRIDAY PM CONDITIONING</div>`;
-    main.appendChild(friPMHeader);
-    renderConditioning(main, w, "fri");
+  // Sat = Pilates / Activity with Simone
+  if (dayKey === "sat") {
+    renderHeaderRow(main, "Saturday", null, weekInMeso, "Activity with Simone");
+    renderPilatesCard(main, w);
     return;
   }
 
-  // Mon / Tue / Thu: lift only
+  // Mon / Tue / Thu / Fri: lift only (Friday no longer includes PM conditioning)
   if (liftKey) {
     renderHeaderRow(main, DAYS[liftKey].label, rpe, weekInMeso, DAYS[liftKey].sub);
     renderLiftDay(main, w, mesoIdx, weekInMeso, liftKey, isDeload(weekInMeso));
     return;
   }
+}
+
+function renderPilatesCard(main, week) {
+  const key = `M${weekToMeso(week).mesoIdx}.W${week}.sat.pilates`;
+  const sess = state.sessions[key] || { sets: [false], notes: "" };
+  state.sessions[key] = sess;
+  const done = sess.sets[0];
+  const card = document.createElement("div");
+  card.className = "cond" + (done ? " complete" : "");
+  card.innerHTML = `
+    <div class="cond-label">PILATES / ACTIVITY · WITH SIMONE</div>
+    <div class="cond-workout">Whatever moves with her — pilates, walk, hike, etc.</div>
+    <button class="cond-toggle ${done ? 'done' : ''}">${done ? '✓ DONE' : 'MARK COMPLETE'}</button>
+    <input class="ex-notes" placeholder="Notes" value="${escapeHtml(sess.notes || '')}">
+  `;
+  card.querySelector('.cond-toggle').addEventListener('click', () => {
+    sess.sets[0] = !sess.sets[0]; saveState(); renderAll();
+  });
+  card.querySelector('.ex-notes').addEventListener('change', (e) => {
+    sess.notes = e.target.value; saveState();
+  });
+  main.appendChild(card);
 }
 
 function renderHeaderRow(main, title, rpe, weekInMeso, sub) {
@@ -628,33 +621,6 @@ function renderBWCard(meso, week, day, exId, deload) {
   return card;
 }
 
-function renderConditioning(main, week, dayKey) {
-  const cond = CONDITIONING[week - 1];
-  if (!cond) return;
-  const block = dayKey === "fri" ? cond.friPM : cond[dayKey];
-  if (!block) return;
-  const condKey = `M${weekToMeso(week).mesoIdx}.W${week}.${dayKey}.cond`;
-  const sess = state.sessions[condKey] || { sets: [false], notes: "" };
-  state.sessions[condKey] = sess;
-  const done = sess.sets[0];
-  const card = document.createElement("div");
-  card.className = "cond" + (done ? " complete" : "");
-  card.innerHTML = `
-    <div class="cond-label">CONDITIONING · ${block.label.toUpperCase()}</div>
-    <div class="cond-modality">Assault Bike</div>
-    <div class="cond-workout">${block.text}</div>
-    <button class="cond-toggle ${done ? 'done' : ''}">${done ? '✓ COMPLETE' : 'MARK COMPLETE'}</button>
-    <input class="ex-notes" placeholder="Notes" value="${escapeHtml(sess.notes || '')}">
-  `;
-  card.querySelector('.cond-toggle').addEventListener('click', () => {
-    sess.sets[0] = !sess.sets[0]; saveState(); renderAll();
-  });
-  card.querySelector('.ex-notes').addEventListener('change', (e) => {
-    sess.notes = e.target.value; saveState();
-  });
-  main.appendChild(card);
-}
-
 function isExerciseComplete(sess) {
   if (!sess) return false;
   const allSetsDone = sess.sets.length > 0 && sess.sets.every(Boolean);
@@ -666,9 +632,9 @@ function isExerciseComplete(sess) {
 function BW_FROM_SESS(sess) { return sess.weight == null && sess.reps == null; }
 
 function isDayComplete(dayKey, week) {
-  if (dayKey === "wed") return false;
-  if (dayKey === "sat" || dayKey === "sun") {
-    const k = `M${weekToMeso(week).mesoIdx}.W${week}.${dayKey}.cond`;
+  if (dayKey === "wed" || dayKey === "sun") return false; // pure rest, never marked complete
+  if (dayKey === "sat") {
+    const k = `M${weekToMeso(week).mesoIdx}.W${week}.sat.pilates`;
     const s = state.sessions[k]; return !!(s && s.sets[0]);
   }
   const liftKey = DAY_KEY_TO_LIFT[dayKey];
@@ -683,11 +649,6 @@ function isDayComplete(dayKey, week) {
     } else {
       if (!sess.sets.every(Boolean) || sess.reps == null) return false;
     }
-  }
-  // Friday also needs PM conditioning
-  if (dayKey === "fri") {
-    const k = `M${mesoIdx}.W${week}.fri.cond`;
-    const s = state.sessions[k]; if (!(s && s.sets[0])) return false;
   }
   return true;
 }
