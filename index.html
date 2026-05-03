@@ -162,6 +162,84 @@
     padding: 10px 16px; border-radius: 20px; font-weight: 700; font-size: 13px;
     opacity: 0; transition: opacity 200ms; pointer-events: none; z-index: 70; }
   .toast.show { opacity: 1; }
+
+  /* Dashboard */
+  .dash-card { background: var(--bg-card); border: 1px solid var(--border);
+    border-radius: 10px; padding: 14px; margin: 10px 0; }
+  .dash-card h3 { font-size: 11px; letter-spacing: 0.15em; color: var(--accent);
+    font-weight: 800; margin: 0 0 10px; text-transform: uppercase; }
+  .dash-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 10px 0; }
+  .dash-row .dash-card { margin: 0; }
+  .dash-stat { display: flex; align-items: baseline; gap: 8px; }
+  .dash-stat .num { font-size: 28px; font-weight: 900; font-variant-numeric: tabular-nums;
+    line-height: 1; }
+  .dash-stat .num.accent { color: var(--accent); }
+  .dash-stat .num.green { color: var(--green); }
+  .dash-stat .unit { font-size: 11px; color: var(--text-dim); letter-spacing: 0.1em;
+    text-transform: uppercase; }
+  .dash-stat .sub { font-size: 11px; color: var(--text-dim); margin-left: auto; }
+
+  .today-card .today-meta { font-size: 12px; color: var(--text-dim); letter-spacing: 0.05em;
+    text-transform: uppercase; margin-bottom: 4px; }
+  .today-card .today-title { font-size: 22px; font-weight: 900; margin-bottom: 4px; }
+  .today-card .today-sub { font-size: 13px; color: var(--text-dim); margin-bottom: 12px; }
+  .today-card .today-prog { font-size: 12px; color: var(--text-dim); margin-bottom: 12px; }
+  .today-card .start-btn { display: block; width: 100%; padding: 14px;
+    background: var(--accent); color: #000; border: none; border-radius: 8px;
+    font-weight: 800; letter-spacing: 0.1em; font-size: 13px; cursor: pointer; }
+  .today-card .start-btn.done { background: var(--green); color: #fff; }
+
+  .weight-card .input-row { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+  .weight-card .input-row input { width: 90px; text-align: center; font-weight: 800;
+    font-size: 22px; padding: 10px 8px; }
+  .weight-card .input-row .label { font-size: 11px; color: var(--text-dim);
+    letter-spacing: 0.1em; text-transform: uppercase; }
+  .weight-card .latest { font-size: 12px; color: var(--text-dim); margin-left: auto; }
+  .weight-progress { height: 6px; background: #2a2a2a; border-radius: 3px;
+    overflow: hidden; margin-top: 12px; }
+  .weight-progress .bar { height: 100%; background: linear-gradient(90deg, var(--accent), var(--green)); }
+  .weight-foot { display: flex; justify-content: space-between; font-size: 11px;
+    color: var(--text-dim); margin-top: 6px; letter-spacing: 0.05em; }
+
+  .last-card .last-day { font-size: 18px; font-weight: 800; }
+  .last-card .last-line { font-size: 13px; color: var(--text-dim); margin-top: 4px;
+    letter-spacing: 0.05em; }
+  .last-card .last-totals { font-size: 14px; font-weight: 700; margin-top: 6px; }
+
+  .pr-list { display: flex; flex-direction: column; }
+  .pr-item { display: flex; align-items: center; justify-content: space-between;
+    font-size: 14px; padding: 8px 0; border-bottom: 1px solid var(--border); }
+  .pr-item:last-child { border-bottom: none; }
+  .pr-item .pr-name { color: var(--text); }
+  .pr-item .pr-w { font-weight: 800; color: var(--accent); font-variant-numeric: tabular-nums; }
+  .pr-item .arrow { color: var(--green); font-weight: 800; margin-right: 6px; }
+
+  .weight-chart { width: 100%; height: 140px; display: block; }
+
+  .cal-table { display: flex; flex-direction: column; gap: 3px; }
+  .cal-row { display: grid; grid-template-columns: 16px 1fr; align-items: center; gap: 6px; }
+  .cal-day { font-size: 10px; color: var(--text-muted); letter-spacing: 0.05em;
+    font-weight: 700; }
+  .cal-cells { display: grid; grid-template-columns: repeat(20, 1fr); gap: 2px; }
+  .cal-cell { aspect-ratio: 1; border-radius: 2px; background: #1f1f1f; }
+  .cal-cell.lift-done { background: var(--green); }
+  .cal-cell.lift-missed { background: #3a1a1a; border: 1px solid #5a2a2a; }
+  .cal-cell.pilates-done { background: var(--accent-rust); }
+  .cal-cell.pilates-missed { background: #2a1a10; border: 1px solid #4a2a18; }
+  .cal-cell.rest { background: #1a1a1a; }
+  .cal-cell.future { background: #141414; border: 1px dashed #2a2a2a; }
+  .cal-cell.today { outline: 2px solid var(--accent); outline-offset: 1px; }
+  .cal-axis { display: grid; grid-template-columns: 16px 1fr; gap: 6px; margin-top: 4px;
+    font-size: 9px; color: var(--text-muted); }
+  .cal-axis-row { display: grid; grid-template-columns: repeat(20, 1fr); gap: 2px; }
+  .cal-axis-row span { text-align: center; }
+  .cal-legend { display: flex; flex-wrap: wrap; gap: 12px; font-size: 11px;
+    color: var(--text-dim); margin-top: 12px; }
+  .cal-legend span { display: inline-flex; align-items: center; gap: 5px; }
+  .cal-legend i { width: 10px; height: 10px; border-radius: 2px; display: inline-block; }
+
+  /* Home tab variant */
+  .tab.home-tab { flex: 0 0 auto; min-width: 56px; }
 </style>
 </head>
 <body>
@@ -220,6 +298,8 @@
 // PROGRAM DATA
 // ============================================================
 const PROGRAM_START = "2026-05-04"; // Monday W1 of Meso 1
+const GOAL_WEIGHT = 185;             // lbs — used by dashboard progress bar
+const REFERENCE_START_WEIGHT = 212;  // lbs — Jan 2026 starting point, fallback if no weights logged
 
 const MESOS = [
   { idx: 1, name: "Foundation",     workRPE: "RPE 7",   deloadRPE: "RPE 5–6" },
@@ -304,7 +384,7 @@ function defaultState() {
   for (const [id, ex] of Object.entries(EXERCISES)) {
     if (ex.defaultStart != null) sw[id] = ex.defaultStart;
   }
-  return { startingWeights: sw, sessions: {}, settings: { restSecs: 90, weekOverride: null } };
+  return { startingWeights: sw, sessions: {}, weights: {}, settings: { restSecs: 90, weekOverride: null } };
 }
 function saveState() { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); }
 
@@ -335,8 +415,20 @@ function isDeload(weekInMeso) { return weekInMeso === 4; }
 const DOW_TO_DAY_KEY = ["sun","mon","tue","wed","thu","fri","sat"];
 const DAY_KEY_TO_LABEL = { mon: "Mon", tue: "Tue", wed: "Wed", thu: "Thu", fri: "Fri", sat: "Sat", sun: "Sun" };
 const DAY_KEY_TO_LIFT  = { mon: "push", tue: "pull", wed: null, thu: "legs", fri: "full", sat: null, sun: null };
+const LIFT_TO_DAY_KEY  = { push: "mon", pull: "tue", legs: "thu", full: "fri" };
 
 function todayDayKey() { return DOW_TO_DAY_KEY[new Date().getDay()]; }
+function todayYMD() { const d = new Date(); d.setHours(0,0,0,0); return dateToYMD(d); }
+function dateForWeekDay(week, dayKey) {
+  // Returns Date for a given (week, dayKey). week is 1-based.
+  const dow = DOW_TO_DAY_KEY.indexOf(dayKey);
+  if (dow < 0) return null;
+  // mon=0, tue=1, wed=2, thu=3, fri=4, sat=5, sun=6 (within program week)
+  const dayOffset = dow === 0 ? 6 : dow - 1;
+  const d = ymdToDate(PROGRAM_START);
+  d.setDate(d.getDate() + (week - 1) * 7 + dayOffset);
+  return d;
+}
 
 // ============================================================
 // PROGRESSION CALC
@@ -403,9 +495,177 @@ function ensureSession(meso, week, day, exId) {
 }
 
 // ============================================================
+// DASHBOARD HELPERS
+// ============================================================
+function getWeightHistory() {
+  return Object.entries(state.weights || {})
+    .map(([d, w]) => ({ ymd: d, weight: +w }))
+    .filter(p => !isNaN(p.weight))
+    .sort((a, b) => a.ymd.localeCompare(b.ymd));
+}
+function getCurrentWeight() {
+  const h = getWeightHistory();
+  return h.length ? h[h.length - 1].weight : null;
+}
+function getStartWeight() {
+  // Anchor to whichever is higher: the user's reference start weight (e.g. 212 from Jan)
+  // or the first weight ever logged. Otherwise a same-day single entry produces a flat 0% bar.
+  const h = getWeightHistory();
+  const firstLogged = h.length ? h[0].weight : null;
+  if (firstLogged == null) return REFERENCE_START_WEIGHT;
+  return Math.max(firstLogged, REFERENCE_START_WEIGHT);
+}
+
+// Walk every day from program start to today and return cells for a 20-week calendar
+function buildCalendar() {
+  const today = new Date(); today.setHours(0,0,0,0);
+  const cells = [];
+  for (let w = 1; w <= 20; w++) {
+    for (let i = 0; i < 7; i++) {
+      const dayKey = ["mon","tue","wed","thu","fri","sat","sun"][i];
+      const d = dateForWeekDay(w, dayKey);
+      const ymd = dateToYMD(d);
+      let status;
+      if (d > today) status = 'future';
+      else if (dayKey === 'wed' || dayKey === 'sun') status = 'rest';
+      else if (dayKey === 'sat') status = isDayComplete('sat', w) ? 'pilates-done' : 'pilates-missed';
+      else status = isDayComplete(dayKey, w) ? 'lift-done' : 'lift-missed';
+      cells.push({ date: d, ymd, dayKey, week: w, status });
+    }
+  }
+  return cells;
+}
+
+// Streak walks back from today through scheduled training days only (mon/tue/thu/fri/sat).
+// Wed/Sun are rest and don't break the streak. Today's not-yet-done lift gets a grace pass.
+function getStreak() {
+  const start = ymdToDate(PROGRAM_START);
+  const today = new Date(); today.setHours(0,0,0,0);
+  if (today < start) return 0;
+  let streak = 0;
+  for (const d = new Date(today); d >= start; d.setDate(d.getDate() - 1)) {
+    const dayKey = DOW_TO_DAY_KEY[d.getDay()];
+    if (dayKey === 'wed' || dayKey === 'sun') continue;
+    const week = Math.floor(diffDays(d, start) / 7) + 1;
+    if (week < 1 || week > 20) break;
+    const done = isDayComplete(dayKey, week);
+    if (done) { streak++; continue; }
+    if (dateToYMD(d) === todayYMD()) continue; // grace for today
+    break;
+  }
+  return streak;
+}
+
+function getLongestStreak() {
+  const start = ymdToDate(PROGRAM_START);
+  const today = new Date(); today.setHours(0,0,0,0);
+  if (today < start) return 0;
+  let max = 0, cur = 0;
+  for (const d = new Date(start); d <= today; d.setDate(d.getDate() + 1)) {
+    const dayKey = DOW_TO_DAY_KEY[d.getDay()];
+    if (dayKey === 'wed' || dayKey === 'sun') continue;
+    const week = Math.floor(diffDays(d, start) / 7) + 1;
+    if (week < 1 || week > 20) continue;
+    if (isDayComplete(dayKey, week)) { cur++; if (cur > max) max = cur; }
+    else cur = 0;
+  }
+  return max;
+}
+
+function getAdherence() {
+  const start = ymdToDate(PROGRAM_START);
+  const today = new Date(); today.setHours(0,0,0,0);
+  if (today < start) return { done: 0, planned: 0, pct: 0 };
+  let done = 0, planned = 0;
+  for (const d = new Date(start); d <= today; d.setDate(d.getDate() + 1)) {
+    const dayKey = DOW_TO_DAY_KEY[d.getDay()];
+    if (dayKey === 'wed' || dayKey === 'sun') continue;
+    const week = Math.floor(diffDays(d, start) / 7) + 1;
+    if (week < 1 || week > 20) continue;
+    const isToday = dateToYMD(d) === todayYMD();
+    const complete = isDayComplete(dayKey, week);
+    if (isToday && !complete) continue; // don't penalize for today still-in-progress
+    planned++;
+    if (complete) done++;
+  }
+  return { done, planned, pct: planned ? Math.round(100 * done / planned) : 0 };
+}
+
+function getTotalLbsLifted() {
+  let total = 0;
+  for (const sess of Object.values(state.sessions)) {
+    if (!sess || sess.weight == null || sess.reps == null) continue;
+    const setsDone = sess.sets.filter(Boolean).length;
+    total += sess.weight * sess.reps * setsDone;
+  }
+  return Math.round(total);
+}
+
+function getLastSession() {
+  const start = ymdToDate(PROGRAM_START);
+  const today = new Date(); today.setHours(0,0,0,0);
+  if (today < start) return null;
+  for (const d = new Date(today); d >= start; d.setDate(d.getDate() - 1)) {
+    const dayKey = DOW_TO_DAY_KEY[d.getDay()];
+    const liftKey = DAY_KEY_TO_LIFT[dayKey];
+    if (!liftKey) continue;
+    const week = Math.floor(diffDays(d, start) / 7) + 1;
+    if (week < 1 || week > 20) continue;
+    if (!isDayComplete(dayKey, week)) continue;
+    const day = DAYS[liftKey];
+    const { mesoIdx } = weekToMeso(week);
+    let lifts = 0, totalLbs = 0;
+    for (const exId of day.exercises) {
+      const sess = getSession(mesoIdx, week, liftKey, exId);
+      if (!sess) continue;
+      lifts++;
+      if (sess.weight != null && sess.reps != null) {
+        const setsDone = sess.sets.filter(Boolean).length;
+        totalLbs += sess.weight * sess.reps * setsDone;
+      }
+    }
+    return { date: new Date(d), dayKey, liftKey, label: day.label, lifts, totalLbs: Math.round(totalLbs), week, mesoIdx };
+  }
+  return null;
+}
+
+// PR = a session whose weight beat the running max for that exercise, within the lookback window.
+function getRecentPRs(daysBack = 21) {
+  const cutoff = new Date(); cutoff.setHours(0,0,0,0);
+  cutoff.setDate(cutoff.getDate() - daysBack);
+  const byEx = {};
+  for (const [k, sess] of Object.entries(state.sessions)) {
+    if (!sess || sess.weight == null || sess.reps == null) continue;
+    const parts = k.split('.');
+    if (parts.length !== 4) continue;
+    const exId = parts[3];
+    if (!EXERCISES[exId]) continue;
+    const w = +parts[1].slice(1);
+    const liftOrDayKey = parts[2];
+    const dayKey = LIFT_TO_DAY_KEY[liftOrDayKey] || liftOrDayKey; // sessions store lift key (push/pull/...)
+    const d = dateForWeekDay(w, dayKey);
+    if (!d) continue;
+    (byEx[exId] = byEx[exId] || []).push({ date: d, weight: sess.weight, reps: sess.reps });
+  }
+  const prs = [];
+  for (const [exId, list] of Object.entries(byEx)) {
+    if (list.length < 2) continue;
+    list.sort((a, b) => a.date - b.date);
+    let max = list[0].weight;
+    for (let i = 1; i < list.length; i++) {
+      if (list[i].weight > max && list[i].date >= cutoff) {
+        prs.push({ exId, name: EXERCISES[exId].name, weight: list[i].weight, reps: list[i].reps, date: list[i].date });
+      }
+      if (list[i].weight > max) max = list[i].weight;
+    }
+  }
+  return prs.sort((a, b) => b.date - a.date).slice(0, 5);
+}
+
+// ============================================================
 // SELECTION STATE
 // ============================================================
-let selectedDayKey = todayDayKey();
+let selectedDayKey = "home";
 
 // ============================================================
 // RENDERING
@@ -429,22 +689,24 @@ function renderHeader() {
 }
 
 function renderTabs() {
-  const dayKeys = ["mon","tue","wed","thu","fri","sat","sun"];
+  const dayKeys = ["home","mon","tue","wed","thu","fri","sat","sun"];
   const today = todayDayKey();
   const w = getCurrentWeek();
   const tabs = $("#tabs");
   tabs.innerHTML = "";
   for (const k of dayKeys) {
     const t = document.createElement("button");
-    t.className = "tab" + (k === today ? " today" : "") + (k === selectedDayKey ? " active" : "");
-    t.innerHTML = `<div>${DAY_KEY_TO_LABEL[k]}</div><div class="dow">${dayLabelShort(k)}</div>`;
-    if (w >= 1 && w <= 20 && isDayComplete(k, w)) t.classList.add("complete");
-    t.onclick = () => { selectedDayKey = k; renderAll(); };
+    const isToday = k !== "home" && k === today;
+    t.className = "tab" + (k === "home" ? " home-tab" : "") + (isToday ? " today" : "") + (k === selectedDayKey ? " active" : "");
+    const top = k === "home" ? "HOME" : DAY_KEY_TO_LABEL[k];
+    t.innerHTML = `<div>${top}</div><div class="dow">${dayLabelShort(k)}</div>`;
+    if (k !== "home" && w >= 1 && w <= 20 && isDayComplete(k, w)) t.classList.add("complete");
+    t.onclick = () => { selectedDayKey = k; renderAll(); window.scrollTo(0, 0); };
     tabs.appendChild(t);
   }
 }
 function dayLabelShort(key) {
-  return { mon: "PUSH", tue: "PULL", wed: "REST", thu: "LEGS", fri: "FULL", sat: "PILATES", sun: "REST" }[key];
+  return { home: "📊", mon: "PUSH", tue: "PULL", wed: "REST", thu: "LEGS", fri: "FULL", sat: "PILATES", sun: "REST" }[key];
 }
 function formatDate(s) {
   const d = ymdToDate(s);
@@ -455,6 +717,20 @@ function renderMain() {
   const main = $("#main");
   main.innerHTML = "";
   const w = getCurrentWeek();
+  const dayKey = selectedDayKey;
+
+  // Dashboard renders for any week state (including pre-program and post-program)
+  if (dayKey === "home") {
+    if (w >= 1 && w <= 20) {
+      const { mesoIdx, weekInMeso } = weekToMeso(w);
+      const meso = MESOS[mesoIdx - 1];
+      const rpe = isDeload(weekInMeso) ? meso.deloadRPE : meso.workRPE;
+      renderDashboard(main, w, mesoIdx, weekInMeso, meso, rpe);
+    } else {
+      renderDashboard(main, w, null, null, null, null);
+    }
+    return;
+  }
 
   if (w === 0) {
     main.innerHTML = `<div class="empty-state"><h3>NOT STARTED YET</h3><p>Program kicks off ${formatDate(PROGRAM_START)}.</p></div>`;
@@ -468,7 +744,6 @@ function renderMain() {
   const { mesoIdx, weekInMeso } = weekToMeso(w);
   const meso = MESOS[mesoIdx - 1];
   const rpe = isDeload(weekInMeso) ? meso.deloadRPE : meso.workRPE;
-  const dayKey = selectedDayKey;
   const liftKey = DAY_KEY_TO_LIFT[dayKey];
 
   // Wed = pure rest
@@ -496,6 +771,245 @@ function renderMain() {
     renderLiftDay(main, w, mesoIdx, weekInMeso, liftKey, isDeload(weekInMeso));
     return;
   }
+}
+
+function renderDashboard(main, week, mesoIdx, weekInMeso, meso, rpe) {
+  const today = new Date(); today.setHours(0,0,0,0);
+  const todayKey = todayDayKey();
+  const todayLift = DAY_KEY_TO_LIFT[todayKey];
+
+  // ---- Today preview ----
+  const todayCard = document.createElement("div");
+  todayCard.className = "dash-card today-card";
+  const dateStr = today.toLocaleDateString(undefined, { weekday: "long", month: "short", day: "numeric" });
+  if (week === 0) {
+    todayCard.innerHTML = `
+      <h3>Today · ${dateStr}</h3>
+      <div class="today-title">Program starts ${formatDate(PROGRAM_START)}</div>
+      <div class="today-sub">Pre-program window. Use this time to set starting weights in settings.</div>`;
+  } else if (week > 20) {
+    todayCard.innerHTML = `
+      <h3>Today · ${dateStr}</h3>
+      <div class="today-title">Program complete 🎯</div>`;
+  } else {
+    const tag = isDeload(weekInMeso) ? " · DELOAD" : "";
+    const subline = `Week ${week} of 20 · ${meso.name}${tag} · ${rpe}`;
+    if (todayLift) {
+      const day = DAYS[todayLift];
+      const exercises = day.exercises;
+      let setsDone = 0, setsTotal = 0;
+      for (const exId of exercises) {
+        const sess = getSession(mesoIdx, week, todayLift, exId);
+        if (sess) { setsDone += sess.sets.filter(Boolean).length; setsTotal += sess.sets.length; }
+        else setsTotal += isDeload(weekInMeso) ? 2 : 3;
+      }
+      const done = isDayComplete(todayKey, week);
+      todayCard.innerHTML = `
+        <div class="today-meta">${dateStr} · ${subline}</div>
+        <div class="today-title">${day.label}</div>
+        <div class="today-sub">${day.sub}</div>
+        <div class="today-prog">${exercises.length} lifts · ${setsDone}/${setsTotal} sets done</div>
+        <button class="start-btn ${done ? 'done' : ''}" data-go="${todayKey}">${done ? '✓ COMPLETE — REVIEW' : (setsDone > 0 ? 'CONTINUE WORKOUT' : 'START WORKOUT')}</button>`;
+    } else if (todayKey === 'sat') {
+      const k = `M${mesoIdx}.W${week}.sat.pilates`;
+      const sess = state.sessions[k];
+      const done = !!(sess && sess.sets[0]);
+      todayCard.innerHTML = `
+        <div class="today-meta">${dateStr} · ${subline}</div>
+        <div class="today-title">Pilates / Activity with Simone</div>
+        <div class="today-sub">Move with her — pilates, walk, hike.</div>
+        <button class="start-btn ${done ? 'done' : ''}" data-go="sat">${done ? '✓ DONE — REVIEW' : 'OPEN'}</button>`;
+    } else {
+      todayCard.innerHTML = `
+        <div class="today-meta">${dateStr} · ${subline}</div>
+        <div class="today-title">Rest day</div>
+        <div class="today-sub">Hydrate, sleep, walk if you feel like it.</div>`;
+    }
+  }
+  main.appendChild(todayCard);
+
+  // ---- Daily weight ----
+  const wt = document.createElement("div");
+  wt.className = "dash-card weight-card";
+  const todayWeight = state.weights?.[todayYMD()] ?? "";
+  const cur = getCurrentWeight();
+  const start = getStartWeight();
+  const total = Math.max(start - GOAL_WEIGHT, 1);
+  const lost = cur != null ? Math.max(0, start - cur) : 0;
+  const pct = Math.max(0, Math.min(100, Math.round(100 * lost / total)));
+  wt.innerHTML = `
+    <h3>Morning Weigh-In</h3>
+    <div class="input-row">
+      <input id="weight-input" type="number" inputmode="decimal" step="0.1" min="0" placeholder="—" value="${todayWeight}">
+      <span class="label">lbs · today</span>
+      <span class="latest">${cur != null ? `Latest: <strong style="color:var(--text)">${cur}</strong>` : 'No entries yet'}</span>
+    </div>
+    <div class="weight-progress"><div class="bar" style="width:${pct}%"></div></div>
+    <div class="weight-foot"><span>Start ${start} lbs</span><span>${pct}% to goal</span><span>Goal ${GOAL_WEIGHT} lbs</span></div>`;
+  main.appendChild(wt);
+  wt.querySelector('#weight-input').addEventListener('change', (e) => {
+    const v = parseFloat(e.target.value);
+    state.weights = state.weights || {};
+    if (isNaN(v) || v <= 0) delete state.weights[todayYMD()];
+    else state.weights[todayYMD()] = v;
+    saveState(); renderAll();
+  });
+
+  // ---- Streak / Adherence row ----
+  if (week >= 1) {
+    const streak = getStreak();
+    const longest = getLongestStreak();
+    const adh = getAdherence();
+    const row = document.createElement("div");
+    row.className = "dash-row";
+    row.innerHTML = `
+      <div class="dash-card">
+        <h3>Streak</h3>
+        <div class="dash-stat"><span class="num accent">${streak}</span><span class="unit">day${streak === 1 ? '' : 's'}</span></div>
+        <div class="weight-foot"><span>Longest ${longest}</span><span>${streak > 0 ? '🔥' : '—'}</span></div>
+      </div>
+      <div class="dash-card">
+        <h3>Adherence</h3>
+        <div class="dash-stat"><span class="num green">${adh.pct}<span style="font-size:18px">%</span></span></div>
+        <div class="weight-foot"><span>${adh.done} of ${adh.planned} sessions</span></div>
+      </div>`;
+    main.appendChild(row);
+  }
+
+  // ---- Last session ----
+  const last = getLastSession();
+  if (last) {
+    const ago = Math.max(0, diffDays(today, last.date));
+    const agoStr = ago === 0 ? "Today" : ago === 1 ? "Yesterday" : `${ago} days ago`;
+    const card = document.createElement("div");
+    card.className = "dash-card last-card";
+    card.innerHTML = `
+      <h3>Last Session</h3>
+      <div class="last-day">${last.label}</div>
+      <div class="last-line">${agoStr} · Week ${last.week}</div>
+      <div class="last-totals">${last.lifts} lifts · ${last.totalLbs.toLocaleString()} lbs total</div>`;
+    main.appendChild(card);
+  }
+
+  // ---- Recent PRs ----
+  const prs = getRecentPRs();
+  if (prs.length) {
+    const card = document.createElement("div");
+    card.className = "dash-card";
+    card.innerHTML = `<h3>Recent PRs · Last 21 Days</h3>
+      <div class="pr-list">${prs.map(p => `
+        <div class="pr-item">
+          <span><span class="arrow">↑</span><span class="pr-name">${p.name}</span></span>
+          <span class="pr-w">${p.weight} lbs</span>
+        </div>`).join('')}</div>`;
+    main.appendChild(card);
+  }
+
+  // ---- Weight trend chart ----
+  const history = getWeightHistory();
+  if (history.length >= 1) {
+    const card = document.createElement("div");
+    card.className = "dash-card";
+    card.innerHTML = `<h3>Weight Trend</h3>${renderWeightChartSVG(history)}`;
+    main.appendChild(card);
+  }
+
+  // ---- Calendar ----
+  if (week >= 1) {
+    const card = document.createElement("div");
+    card.className = "dash-card";
+    card.innerHTML = `<h3>Workout Calendar · 20 Weeks</h3>`;
+    card.appendChild(renderCalendarGrid());
+    const legend = document.createElement("div");
+    legend.className = "cal-legend";
+    legend.innerHTML = `
+      <span><i style="background:var(--green)"></i>Lift done</span>
+      <span><i style="background:var(--accent-rust)"></i>Pilates</span>
+      <span><i style="background:#3a1a1a;border:1px solid #5a2a2a"></i>Missed</span>
+      <span><i style="background:#1a1a1a"></i>Rest</span>
+      <span><i style="background:#141414;border:1px dashed #2a2a2a"></i>Future</span>`;
+    card.appendChild(legend);
+    main.appendChild(card);
+  }
+
+  // ---- Total lbs lifted ----
+  const total_lbs = getTotalLbsLifted();
+  if (total_lbs > 0) {
+    const card = document.createElement("div");
+    card.className = "dash-card";
+    card.innerHTML = `<h3>Lifetime Volume</h3>
+      <div class="dash-stat"><span class="num accent">${total_lbs.toLocaleString()}</span><span class="unit">lbs lifted · program-to-date</span></div>`;
+    main.appendChild(card);
+  }
+
+  // Wire navigation buttons
+  main.querySelectorAll('[data-go]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      selectedDayKey = btn.getAttribute('data-go');
+      renderAll(); window.scrollTo(0, 0);
+    });
+  });
+}
+
+function renderCalendarGrid() {
+  const cells = buildCalendar();
+  const today = todayYMD();
+  const wrap = document.createElement("div");
+  wrap.className = "cal-table";
+  const dayLabels = ["M","T","W","T","F","S","S"];
+  const dayKeys = ["mon","tue","wed","thu","fri","sat","sun"];
+  for (let i = 0; i < 7; i++) {
+    const row = document.createElement("div");
+    row.className = "cal-row";
+    row.innerHTML = `<span class="cal-day">${dayLabels[i]}</span>`;
+    const inner = document.createElement("div");
+    inner.className = "cal-cells";
+    for (let w = 1; w <= 20; w++) {
+      const cell = cells.find(c => c.week === w && c.dayKey === dayKeys[i]);
+      const div = document.createElement("div");
+      div.className = `cal-cell ${cell.status}` + (cell.ymd === today ? ' today' : '');
+      div.title = `${cell.ymd} · ${cell.dayKey.toUpperCase()} · ${cell.status.replace('-', ' ')}`;
+      inner.appendChild(div);
+    }
+    row.appendChild(inner);
+    wrap.appendChild(row);
+  }
+  // Week-number axis
+  const axis = document.createElement("div");
+  axis.className = "cal-axis";
+  axis.innerHTML = `<span></span><div class="cal-axis-row">${
+    Array.from({length: 20}, (_, i) => `<span>${(i+1) % 5 === 0 || i === 0 ? (i+1) : ''}</span>`).join('')
+  }</div>`;
+  wrap.appendChild(axis);
+  return wrap;
+}
+
+function renderWeightChartSVG(history) {
+  const w = 320, h = 140, pad = { l: 36, r: 12, t: 12, b: 22 };
+  const innerW = w - pad.l - pad.r;
+  const innerH = h - pad.t - pad.b;
+  const weights = history.map(p => p.weight);
+  const minW = Math.min(...weights, GOAL_WEIGHT) - 2;
+  const maxW = Math.max(...weights, GOAL_WEIGHT) + 2;
+  const dates = history.map(p => ymdToDate(p.ymd).getTime());
+  const minD = dates[0];
+  const maxD = Math.max(dates[dates.length - 1], Date.now());
+  const xRange = Math.max(1, maxD - minD);
+  const yRange = Math.max(1, maxW - minW);
+  const x = (t) => pad.l + ((t - minD) / xRange) * innerW;
+  const y = (wt) => pad.t + ((maxW - wt) / yRange) * innerH;
+  const points = history.map(p => `${x(ymdToDate(p.ymd).getTime()).toFixed(1)},${y(p.weight).toFixed(1)}`).join(' ');
+  const yGoal = y(GOAL_WEIGHT);
+  return `
+    <svg class="weight-chart" viewBox="0 0 ${w} ${h}" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <line x1="${pad.l}" x2="${w - pad.r}" y1="${yGoal}" y2="${yGoal}"
+        stroke="#666" stroke-width="1" stroke-dasharray="3 3"/>
+      <text x="${w - pad.r}" y="${yGoal - 4}" fill="#888" font-size="10" text-anchor="end">Goal ${GOAL_WEIGHT}</text>
+      <text x="${pad.l - 4}" y="${pad.t + 10}" fill="#666" font-size="10" text-anchor="end">${maxW.toFixed(0)}</text>
+      <text x="${pad.l - 4}" y="${h - pad.b}" fill="#666" font-size="10" text-anchor="end">${minW.toFixed(0)}</text>
+      ${history.length >= 2 ? `<polyline points="${points}" fill="none" stroke="#f5a623" stroke-width="2" stroke-linejoin="round"/>` : ''}
+      ${history.map(p => `<circle cx="${x(ymdToDate(p.ymd).getTime()).toFixed(1)}" cy="${y(p.weight).toFixed(1)}" r="3.5" fill="#f5a623"/>`).join('')}
+    </svg>`;
 }
 
 function renderPilatesCard(main, week) {
@@ -785,11 +1299,8 @@ function renderAll() {
 }
 renderAll();
 
-// Re-render every minute so the day rolls over at midnight
-setInterval(() => {
-  selectedDayKey = todayDayKey();
-  renderAll();
-}, 60_000);
+// Re-render every minute so the day rolls over at midnight (don't yank user off home/manually-selected tab)
+setInterval(() => { renderAll(); }, 60_000);
 
 // PWA service worker (offline). Inline blob worker so no separate file is needed.
 if ('serviceWorker' in navigator) {
